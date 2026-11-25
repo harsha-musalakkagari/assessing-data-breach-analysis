@@ -2,21 +2,21 @@
 
 ## Project Overview
 
-This project focuses on analyzing factors associated with organizational data breaches using the Modern Crime Theory (MCT) framework.
+This project explores organizational factors associated with data breaches using the **Modern Crime Theory (MCT)** framework.
 
-The study examines how three major factors — **Attractiveness, Visibility, and Guardianship** — relate to the likelihood of data breaches.
+The study examines three key factors — **Attractiveness, Visibility, and Guardianship** — to understand their relationships with organizational data breach risks.
 
-A web-based application developed using Django provides user authentication, data analysis, visualization, and prediction-related functionalities.
+The project uses organizational data covering **4,868 organizations** and applies data analysis and statistical techniques to examine patterns and relationships associated with data breaches.
 
-The research considers organizational data covering **4,868 organizations** and applies statistical analysis to understand patterns and relationships associated with data breach risks.
+A web-based application developed using Django provides user authentication, data analysis, visualization, model performance displays, and prediction-related functionalities.
 
 ## Project Objectives
 
 - Analyze organizational factors associated with data breaches.
-- Examine Attractiveness, Visibility, and Guardianship.
-- Identify patterns in different types of data breaches.
-- Visualize analytical results through charts and tables.
-- Provide a web-based interface for data analysis and predictions.
+- Examine the roles of Attractiveness, Visibility, and Guardianship.
+- Identify patterns across different types of data breaches.
+- Present analytical findings through charts and tables.
+- Integrate data analysis and prediction-related functionality into a web application.
 
 ## Modern Crime Theory Factors
 
@@ -39,11 +39,11 @@ The research considers organizational data covering **4,868 organizations** and 
 ## Project Methodology
 
 1. **Data Collection:** Work with organizational data related to data breach factors.
-2. **Data Preprocessing:** Prepare the data for analysis.
-3. **Exploratory Data Analysis:** Examine distributions, patterns, and relationships.
-4. **Data Visualization:** Present findings through charts and tables.
-5. **Model Evaluation:** Display model performance results using evaluation visualizations.
-6. **Web Application Development:** Integrate the functionalities into a Django-based application.
+2. **Data Preprocessing:** Prepare and organize data for analysis.
+3. **Exploratory Data Analysis (EDA):** Examine data distributions, patterns, and relationships.
+4. **Data Visualization:** Represent analytical findings using charts and tables.
+5. **Model Evaluation:** Display model performance results through evaluation tables and visualizations.
+6. **Web Application Development:** Integrate application functionalities using Django and MySQL.
 
 ## Application Screenshots
 
@@ -95,16 +95,22 @@ The research considers organizational data covering **4,868 organizations** and 
 
 ## Project Structure
 
-- `Data_Analytics/` – Data analytics-related files
-- `Remote_User/` – Remote user module
-- `Service_Provider/` – Service provider module
-- `Template/` – HTML templates
-- `assessing_data_breach/` – Django project configuration
-- `Screenshots/` – Application screenshots and analytical visualizations
-- `Datasets.csv` – Dataset
-- `Results.csv` – Results data
-- `manage.py` – Django management script
-- `requirements.txt` – Python dependencies
+```text
+assessing-data-breach-analysis/
+│
+├── Data_Analytics/
+├── Remote_User/
+├── Service_Provider/
+├── Template/
+├── assessing_data_breach/
+├── Screenshots/
+├── manage.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+*Note: Local dataset and results files are excluded from the GitHub repository.*
 
 ## Installation and Setup
 
@@ -117,8 +123,10 @@ cd assessing-data-breach-analysis
 
 ### 2. Create a Virtual Environment
 
+Python 3.12 is recommended.
+
 ```bash
-python -m venv .venv
+py -3.12 -m venv .venv
 ```
 
 ### 3. Activate the Environment
@@ -132,12 +140,14 @@ Windows PowerShell:
 ### 4. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ### 5. Configure Environment Variables
 
-Create a `.env` file in the project root and configure your local credentials.
+Create a `.env` file in the project root and configure the environment variables required by the Django settings.
+
+Example configuration:
 
 ```env
 SECRET_KEY=your_django_secret_key
@@ -149,45 +159,6 @@ DB_HOST=localhost
 DB_PORT=3306
 ```
 
-Use the variable names expected by your Django settings.
+Use the exact variable names expected by the project's `settings.py` file.
 
-**Important:** Never upload your `.env` file or private database credentials to GitHub.
-
-### 6. Run Database Migrations
-
-```bash
-python manage.py migrate
-```
-
-### 7. Start the Django Development Server
-
-```bash
-python manage.py runserver
-```
-
-Open your browser:
-
-`http://127.0.0.1:8000/`
-
-## Key Learning Outcomes
-
-- Understanding organizational data breach factors.
-- Practical exposure to data preprocessing and exploratory data analysis.
-- Understanding data visualization and analytical interpretation.
-- Exposure to model evaluation and prediction workflows.
-- Developing a web application using Django and MySQL.
-- Using Git and GitHub for project version control.
-
-## Future Enhancements
-
-- Improve analytical dashboards.
-- Explore additional organizational risk indicators.
-- Enhance prediction and evaluation capabilities.
-- Improve application usability and reporting.
-
-## Author
-
-**Harsha Vardhan Musalakkagari**
-
-GitHub: [harsha-musalakkagari](https://github.com/harsha-musalakkagari)
-
+**Important:** Never upload your `.env` file, secret
